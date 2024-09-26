@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click me </button>
+    
+</body>
+<script>
+    let btn=document.getElementById("btn")
+    btn.addEventListener("click",()=>{
+        let btn=document.getElementById("btn");
+        btn.style.background="red";
+        
+        
+        })
+        btn.addEventListener("click",()=>{
+            document.body.style.background="yellow"
+        })
+        
+        document.addEventListener('click', () =>{
+ 
+ document.body.style.backgroundColor = getRandomColor();
+});
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+ }
+
+
+const quotes = [
+{text:"A website without visitors is like a ship lost in the horizon"},
+   {text:"Web development is the art of turning ideas into digital experiences that shape the world"},
+   {text:"In the world of web development, there are no limits to what you can create. The only limit is your imagination."},
+   {text:"The best way to predict the future is to invent it"},
+   {text:"Make it simple, but significant"},
+   {text:"“Good design is obvious. Great design is transparent"}
+];
+
+
+function getRandomQuote() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  return quotes[randomIndex].text;
+
+}
+
+
+document.addEventListener('click', () => {
+ document.body.textContent = getRandomQuote(); 
+ 
+});
+
+</script>
+</html>
